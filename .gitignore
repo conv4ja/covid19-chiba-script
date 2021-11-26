@@ -1,0 +1,9 @@
+*.swp
+*~
+.*~
+data
+out
+data-raw.csv
+data.csv
+data-analyzed.csv
+old
