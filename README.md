@@ -1,7 +1,3 @@
-# State
-
-再構築フェーズ。公開方式は再考中
-
 # About
 
 千葉県の地域別の詳細感染者統計(Excelファイル) をCSVに変換し、かつ地域別の日時感染差集計値を出力するスクリプトです。
@@ -29,7 +25,7 @@ conv.py へのコミットを行う場合には、生成データ(data.csv, data
 
 # Credit
 
-[「新型コロナウイルス感染症患者等の県内発生状況について」](https://www.pref.chiba.lg.jp/shippei/press/2019/ncov-index.html)ページ内のリンクより取得したxlsxファイルを利用しています。
+千葉県庁公式のコロナ統計公表ページ：[「新型コロナウイルス感染症患者等の県内発生状況について」](https://www.pref.chiba.lg.jp/shippei/press/2019/ncov-index.html)のページ内リンクより取得したxlsxファイルを利用しています。
 感染症対策に尽力されている行政職員、医療従事者の皆様に心より敬意を表します。
 
 `fixture`配下のテスト用データについては千葉県の公表統計に属するため、CC-BY-4.0 にてライセンス[されます](https://www.pref.chiba.lg.jp/seisaku/toukeidata/opendata/riyoukiyaku.html)。
