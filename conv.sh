@@ -19,6 +19,6 @@ case "$1" in
 		fix.sh
 		;;
 	help|*)
-		echo 'usage: ci.sh <all|fetch|conv>'
+		echo 'usage: ${0##*/} <all|fetch|conv>'
 		;;
 esac
