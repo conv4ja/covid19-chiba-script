@@ -11,10 +11,17 @@ day=$(expr $(date +%d) - 1)
 
 base_uri=https://www.pref.chiba.lg.jp/shippei/press/2019/documents
 fname=patients
+data_dir=${1:-.}
 
 for source_uri in \
-https://www.pref.chiba.lg.jp/shippei/press/2019/documents/${now}kansensya.xlsx \
+https://www.pref.chiba.lg.jp/shippei/press/2019/documents/${now}kansensya.xlsx; \
 do
-	curl --progress-bar -L $source_uri -o ${1:-.}/${source_uri##*/}  || throw cannot fetch $source_uri
+	file_name=${data_dir:?data_dir not specified}/${source_uri##*/}
+	curl \
+		--progress-bar \
+		-L $source_uri \
+		-o ${file_name:?file_name is not specified} \
+		>&2 || throw cannot fetch $source_uri
 	sleep 1
 done
+echo ${file_name}
